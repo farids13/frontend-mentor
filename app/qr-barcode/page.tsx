@@ -1,8 +1,6 @@
 import React from 'react'
 import imgBarcode from "../../public/qr/images/image-qr-code.png";
 import Image from 'next/image';
-import imgBgDesign from "../../public/qr/design/desktop-design.jpg"
-import { url } from 'inspector';
 
 const qrBarcode = () => {
   return (
