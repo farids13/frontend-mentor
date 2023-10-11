@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  'fontawesome-svg-core': {
+    'license': 'free'
+  },
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,7 +34,12 @@ module.exports = {
         "baseDesaturatedRed": "hsl(0, 36%, 70%)",
         "baseSoftRed": "hsl(0, 93%, 68%)",
         "baseDarkGrayishRed": "hsl(0, 6%, 24%)",
-        "baseBgColor": "hsl(356deg 96% 98%)"
+        "baseBgColor": "hsl(356deg 96% 98%)",
+
+        //ir cell color pallete
+        "irSoftBlue" : "#bde0fe",
+        "irBlue": "#3a86ff",
+        "irPurple" : "#8338EC",
           
       },
       fontFamily : {
@@ -41,6 +49,6 @@ module.exports = {
       },
     }
   },
-  plugins: [],
+  plugins: ['macros'],
 }
 
