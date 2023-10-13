@@ -49,6 +49,9 @@ module.exports = {
       },
     }
   },
-  plugins: ['macros'],
+  daisyui: {
+    themes: ["cupcake"],
+  },
+  plugins: [require("daisyui")],
 }
 
