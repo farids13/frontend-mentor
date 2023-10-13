@@ -20,3 +20,13 @@ export const POST = async (req:Request) => {
         return NextResponse.json("error");
     }
 }
+
+export const GET = async (req:Request) => {
+    try {
+        const products = await prisma.product.findMany();
+        return NextResponse.json(products);
+    } catch (error) {
+        console.log(error);
+        return NextResponse.json("error");
+    }
+}
