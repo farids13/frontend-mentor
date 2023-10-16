@@ -36,6 +36,13 @@ module.exports = {
         "baseDarkGrayishRed": "hsl(0, 6%, 24%)",
         "baseBgColor": "hsl(356deg 96% 98%)",
 
+        "introRed": "hsl(0, 100%, 74%)",
+        "introGreen": "hsl(154, 59%, 51%)",
+        "introBlue": "hsl(248, 32%, 49%)",
+        "introDarkBlue": "hsl(249, 10%, 26%)",
+        "introGrayishBlue": "hsl(246, 25%, 77%)",
+      
+
         //ir cell color pallete
         "irSoftBlue" : "#bde0fe",
         "irBlue": "#3a86ff",
@@ -45,7 +52,8 @@ module.exports = {
       fontFamily : {
         'outfit': ['Outfit', 'sans'],
         'redHatDisplay':['Red Hat Display', 'Arial'],
-        'josefin': ['Josefin Sans', 'Arial']
+        'josefin': ['Josefin Sans', 'Arial'],
+        'poppins' : ['Poppins', 'Arial']
       },
     }
   },

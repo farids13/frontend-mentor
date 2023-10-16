@@ -25,12 +25,32 @@ const getBrands = async () => {
     return res;
 }
 
+// export const getStaticProps = async () => {
+//     const res = await fetch('http://localhost:3000/api/products');
+//     const data = await res.json();
+//
+//     return {
+//         props:{
+//             data,
+//         }
+//     }
+// }
+
+
+interface Product {
+    id:number,
+    title:string,
+    price:number,
+    brandId:number
+}
+
 const product = async () => {
 
     const [products, brands] = await Promise.all([getProducts(), getBrands()]);
 
     // const products = await getProducts();
     // console.log(products);
+
   return (
     <div>
         <div className="mb-2">
@@ -61,6 +81,19 @@ const product = async () => {
                     </td>
                 </tr>
                 ))}
+                {/* {data.map((product, index) =>(
+                    <tr key={product.id}>
+                    <td>{index + 1}</td>
+                    <td>{product.id}</td>
+                    <td>{product.title}</td>
+                    <td>{product.price}</td>
+                    <td>{product.brand.name}</td>
+                    <td className='flex gap-2'>
+                        <DeleteProduct product={product}/>
+                        <UpdateProduct product={product} brands={brands}/>
+                    </td>
+                </tr>
+                ))} */}
             </tbody>
         </table>
     </div>
