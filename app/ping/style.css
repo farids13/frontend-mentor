@@ -1,0 +1,7 @@
+*{
+    outline: 1px solid red;
+}
+
+body{
+    background: url("../../public/ping/design/desktop-design.jpg") center fixed no-repeat;
+}

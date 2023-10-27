@@ -93,7 +93,7 @@ const Intro = () => {
 
     return (
         <main
-            className="flex justify-center items-center h-screen bg-introRed bg-[url('/intro/images/bg-intro-desktop.png')] bg-no-repeat bg-center lg:bg-[url('/intro/images/bg-intro-mobile.png')] bg-fixed bg-cover">
+            className="flex justify-center items-center h-screen lg:h- lg:py-20 bg-introRed bg-[url('/intro/images/bg-intro-desktop.png')] bg-no-repeat bg-center lg:bg-[url('/intro/images/bg-intro-mobile.png')] bg-fixed bg-cover">
             <div className="w-[1440px] h-[800px] flex justify-center items-center font-poppins lg:w-full lg:h-full">
                 <div className=" w-[77%] min-h-[70%] max-h-full flex justify-center items-center lg:flex-col lg:text-center lg:h-fit lg:w-full  ">
                     <div className='text-white w-1/2 lg:w-[80%] lg:mb-5'>

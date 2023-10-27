@@ -25,3 +25,10 @@ model Product {
   brand Brand @relation(fields: [brandId], references: [id])
   brandId Int 
 }
+
+model User{
+  id String @id @default(uuid())
+
+  email String @unique
+  password String
+}

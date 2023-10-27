@@ -53,7 +53,8 @@ module.exports = {
         'outfit': ['Outfit', 'sans'],
         'redHatDisplay':['Red Hat Display', 'Arial'],
         'josefin': ['Josefin Sans', 'Arial'],
-        'poppins' : ['Poppins', 'Arial']
+        'poppins' : ['Poppins', 'Arial'],
+        'libreFranklin' : ['Libre Franklin', 'Arial'],
       },
     }
   },
