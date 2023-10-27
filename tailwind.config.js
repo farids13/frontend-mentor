@@ -41,6 +41,13 @@ module.exports = {
         "introBlue": "hsl(248, 32%, 49%)",
         "introDarkBlue": "hsl(249, 10%, 26%)",
         "introGrayishBlue": "hsl(246, 25%, 77%)",
+
+        //ping
+        "pingBlue": "hsl(223, 87%, 63%)",
+        "pingPaleBlue": "hsl(223, 100%, 88%)",
+        "pingLightRed": "hsl(354, 100%, 66%)",
+        "pingGray": "hsl(0, 0%, 59%)",
+        "pingVeryDarkBlue": "hsl(209, 33%, 12%)",
       
 
         //ir cell color pallete
