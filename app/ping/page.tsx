@@ -5,8 +5,9 @@ import './style.css';
 import Image from 'next/image';
 import logoPing from '@/public/ping/images/logo.svg';
 import hero from '@/public/ping/images/illustration-dashboard.png';
+import { loginIsRequiredServer } from '@/lib/auth';
 
-function Ping() {
+async function Ping() {
 
   const defaultBorderValue = "border-gray-300";
   
@@ -17,6 +18,8 @@ function Ping() {
   useEffect(() => {
     document.title ="Frontend Mentor | Ping coming soon page";
   }, []);
+
+  await loginIsRequiredServer();
 
   const submit = (e:any) => {
 
