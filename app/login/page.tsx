@@ -1,11 +1,10 @@
-import React, { useEffect} from 'react'
+import React from 'react'
 import './style.css'
 import logoIr from '@/public/ir/IRCellLogo.png'
 import Image from 'next/image'
 import { getServerSession } from "next-auth";
 import { authConfig } from '@/lib/auth';
 import { redirect } from "next/navigation";
-import { signIn } from "next-auth/react";
 import { CredentialsForm } from './component/formLogin';
 
 export default async function Login() {

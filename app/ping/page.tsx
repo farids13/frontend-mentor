@@ -5,9 +5,8 @@ import './style.css';
 import Image from 'next/image';
 import logoPing from '@/public/ping/images/logo.svg';
 import hero from '@/public/ping/images/illustration-dashboard.png';
-import { loginIsRequiredServer } from '@/lib/auth';
 
-async function Ping() {
+function Ping() {
 
   const defaultBorderValue = "border-gray-300";
   
@@ -19,9 +18,7 @@ async function Ping() {
     document.title ="Frontend Mentor | Ping coming soon page";
   }, []);
 
-  await loginIsRequiredServer();
-
-  const submit = (e:any) => {
+  const submit = () => {
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     

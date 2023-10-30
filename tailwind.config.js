@@ -48,6 +48,15 @@ module.exports = {
         "pingLightRed": "hsl(354, 100%, 66%)",
         "pingGray": "hsl(0, 0%, 59%)",
         "pingVeryDarkBlue": "hsl(209, 33%, 12%)",
+
+        //newsletter
+        "newsletterTomato": "hsl(4, 100%, 67%)",
+        "newsletterDarkSlateGrey": "hsl(234, 29%, 20%)",
+        "newsletterCharcoalGrey": "hsl(235, 18%, 26%)",
+        "newsletterGrey": "hsl(231, 7%, 60%)",
+        "newsletterWhite": "hsl(0, 0%, 100%)",
+        "newsletterFromGrad" : "#ff537a",
+        "newsletterToGrad" : "#ff693e",
       
 
         //ir cell color pallete
@@ -62,6 +71,7 @@ module.exports = {
         'josefin': ['Josefin Sans', 'Arial'],
         'poppins' : ['Poppins', 'Arial'],
         'libreFranklin' : ['Libre Franklin', 'Arial'],
+        'roboto' : ['Roboto', 'Arial']
       },
     }
   },

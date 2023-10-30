@@ -1,12 +1,6 @@
-import { NextAuthOptions, getServerSession } from "next-auth";
+import { NextAuthOptions } from "next-auth";
 
 import CredentialsProvider from "next-auth/providers/credentials";
-
-import {User} from "next-auth";
-import { redirect } from "next/navigation";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import NextAuth from "next-auth/next";
  
 export const authConfig : NextAuthOptions = {
     session : {
@@ -68,17 +62,3 @@ export const authConfig : NextAuthOptions = {
     }
    
 };
-
-export async function loginIsRequiredServer() {
-    const session = await getServerSession(authConfig);
-    console.log("INI SESSION NYA OM", session);
-    if(!session) return redirect("/login");
-}
-
-export function loginIsRequiredClient(){
-    if(typeof window !== "undefined"){
-        const session = useSession();
-        const router = useRouter();
-        if(!session) router.push("/");
-    }
-}
