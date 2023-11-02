@@ -57,6 +57,14 @@ module.exports = {
         "newsletterWhite": "hsl(0, 0%, 100%)",
         "newsletterFromGrad" : "#ff537a",
         "newsletterToGrad" : "#ff693e",
+
+        "agePurple": "hsl(259, 100%, 65%)",
+        "ageLightRed": "hsl(0, 100%, 67%)",
+        "ageWhite": "hsl(0, 0%, 100%)",
+        "ageOffWhite": "hsl(0, 0%, 94%)",
+        "ageLightGrey": "hsl(0, 0%, 86%)",
+        "ageSmokeyGrey": "hsl(0, 1%, 44%)",
+        "ageOffBlack": "hsl(0, 0%, 8%)",
       
 
         //ir cell color pallete
