@@ -1,6 +1,9 @@
+import { PrismaClient } from "@prisma/client";
 import { NextAuthOptions } from "next-auth";
 
 import CredentialsProvider from "next-auth/providers/credentials";
+
+const prisma = new PrismaClient();
  
 export const authConfig : NextAuthOptions = {
     session : {
@@ -33,10 +36,23 @@ export const authConfig : NextAuthOptions = {
                 if(!credentials || !credentials.email || !credentials.password)
                     return null;
 
-                const user = { id: "1", name: "Farid Satria", email: "faridsatria24@gmail.com" }
-
-                if(credentials.email === user.email)
+                const user = await prisma.user.findFirst({
+                    where: {
+                        email
+                    }
+                });
+                
+                if(credentials?.email === user?.email)
                     return user;
+                else{
+                    const createUser = await prisma.user.create({
+                        data: {
+                            email,
+                            password,
+                        }
+                    });
+                    return createUser;
+                }
 
                 return null;
             },
