@@ -1,7 +1,9 @@
 import { PrismaClient } from "@prisma/client";
-import { NextAuthOptions } from "next-auth";
+import { NextAuthOptions, getServerSession } from "next-auth";
 
 import CredentialsProvider from "next-auth/providers/credentials";
+import { useSession } from "next-auth/react";
+import { redirect, useRouter } from "next/navigation";
 
 const prisma = new PrismaClient();
  
@@ -78,3 +80,16 @@ export const authConfig : NextAuthOptions = {
     }
    
 };
+
+export async function loginIsRequiredServer() {
+    const session = await getServerSession(authConfig);
+    if (!session) return redirect("/");
+}
+
+export function loginIsRequiredClient() {
+    if (typeof window !== "undefined") {
+    const session = useSession();
+    const router = useRouter();
+    if (!session) router.push("/");
+    }
+}
