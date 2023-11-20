@@ -1,9 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-import { NextAuthOptions } from "next-auth";
+import { NextAuthOptions, getServerSession } from "next-auth";
 
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 const prisma = new PrismaClient();
+
+const clientId = process.env.GOOGLE_CLIENT_ID;
+const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
  
 export const authConfig : NextAuthOptions = {
     session : {
@@ -11,6 +15,10 @@ export const authConfig : NextAuthOptions = {
     },
     secret: process.env.NEXTAUTH_SECRET,
     providers:[
+        GoogleProvider({
+            clientId: "898862951743-8uri3uj23b09fldhv2e34t8gbbqs3jmi.apps.googleusercontent.com",
+            clientSecret: "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"
+        }),
         CredentialsProvider({
             name: "SignIn",
 
