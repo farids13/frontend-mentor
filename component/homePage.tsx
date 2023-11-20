@@ -26,21 +26,21 @@ function HomePage(props:any) {
         email: email,
         password: "guest",
         redirect: false,
-      });
+    });
 
-      if (signInResponse && !signInResponse.error) {
-          console.log("Ini Harusnya masuk");
-          route.push("/ping");
-      } else {
-        console.log("Error: ", signInResponse);
-        route.push("/");
-      }
+    if (signInResponse && !signInResponse.error) {
+        console.log("Ini Harusnya masuk");
+        route.push("/ping");
+    } else {
+      console.log("Error: ", signInResponse);
+      route.push("/");
+    }
   }
 
   return (
     <div className={`font-josefin min-h-screen justify-center flex items-center `}>
-        <Image src={heroImg} alt='Hero Image' className='h-screen w-screen absolute object-cover blur-md'/>
-        <main className={`relative flex flex-col justify-start items-center rounded-lg h-[1080px] w-[1920px] text-white bg-[url('/bg-hero.jpg')] bg-center bg-no-repeat bg-cover`}>
+     <Image src={heroImg} alt='Hero Image' className='h-screen w-screen absolute object-cover blur-md'/>
+        <main className={`relative flex flex-col justify-start items-center rounded-lg h-[1080px] w-[1920px] text-white bg-[url('../public/bg-hero.jpg')] bg-center bg-no-repeat bg-cover`}>
           <h1 className={`mt-20 text-[120px] font-bold`}>WELCOME</h1>
           <p className='mt-10'>{userEmail ? "Hello " + userEmail + " welcome back" : "Hello There, Please Continue With Your Email"}</p>
           <form className='mt-32 flex gap-5' onSubmit={(e) => submit(e)}>
